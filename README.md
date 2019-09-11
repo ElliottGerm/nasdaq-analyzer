@@ -1,6 +1,24 @@
-# MlClassifierApp
+### MlClassifierApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+
+## Running ml-classifier-app 
+
+## Prerequisites
+
+You will need to install [node.js](https://nodejs.org/en/download/) in order to use Angular's cli and node package manager.
+
+Once node.js is installed you can install [Angular CLI](https://www.npmjs.com/package/@angular/cli) by running
+
+```bash
+npm i @angular/cli
+```
+
+## Installation
+To get started locally, follow these instructions:
+
+2. Once the project is on your local computer, run ``npm install``. This will install/update all library dependencies for ml-classifier-app.
+3. Run the app from within the ml-classifier-app directory, using the command ``ng s -o``. This will serve and open ml-classifier-app in your default browser using a local host.
 
 ## Development server
 

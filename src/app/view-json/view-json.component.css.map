@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,UAAU;EAC3B,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,IAAI;EAGhB,WAAW,EAAE,iCAAiC;EAC9C,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG;CACnB",
+    "sources": [
+        "view-json.component.scss"
+    ],
+    "names": [],
+    "file": "view-json.component.css"
+}

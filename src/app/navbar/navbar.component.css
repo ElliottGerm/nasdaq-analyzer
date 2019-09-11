@@ -1,0 +1,19 @@
+
+/*style for recollection countdown*/
+.timeLeft {
+  margin-right: 10px;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #007bff;
+}
+
+/*Gradiant color for NASDAQ logo*/
+#nasdaqFont {
+  font-family: fantasy;
+  font-size: 20px;
+  background: -webkit-linear-gradient(#28a745, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=navbar.component.css.map */

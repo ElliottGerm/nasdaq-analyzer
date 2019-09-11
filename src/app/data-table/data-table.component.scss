@@ -1,0 +1,96 @@
+.mat-elevation-z8 {
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.table-header {
+  font-weight: bolder;
+  font-size: 22px;
+  text-align: center;
+}
+
+mat-header-cell {
+  display: flex;
+  justify-content: flex-start;
+}
+
+mat-cell {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mat-column-symbol {
+  flex: 0 0 122px;
+}
+
+.mat-column-ipo_year {
+  flex: 0 0 150px;
+}
+
+.mat-column-market_cap {
+  flex: 0 0 177px;
+}
+
+.mat-column-sector {
+  flex: 0 0 200px;
+}
+
+input {
+  font-size: 49px;
+  -webkit-appearance: searchfield;
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+}
+
+span {
+  margin-left: 8px;
+  color: #28a745;
+  font-size: 53px;
+}
+
+#searchDataTable {
+  display: flex;
+  position: relative;
+  top: -23px;
+}
+
+*::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+
+input:focus {
+  outline: none;
+}
+
+#searchDataTable{
+  margin-right: 20px;
+  margin-left: 20px;
+  border-collapse: separate; 
+  border: 1px solid #343A40;
+  overflow: hidden;
+  perspective: 1px;
+  opacity: .8;
+  border-radius: 10px;
+}
+
+mat-footer-row mat-footer-cell {
+  justify-content: center;
+  font-style: italic;
+}
+
+#tableRows {
+  cursor: pointer;
+}
+
+#tableRows:hover {
+  background-color: rgb(40, 167, 69, .7);
+  mat-cell {
+    // color: white;
+    color: white;
+    // font-weight: bolder;
+  }
+}

@@ -1,0 +1,52 @@
+<head>
+  <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" routerLink='/' id="nasdaqFont">NASDAQ Analyzer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active"><a class="nav-link" routerLink="/" routerLinkActive="active" id="homeLink"
+            [routerLinkActiveOptions]="{exact: true}">Home </a>
+        </li>
+        <li class="nav-item active"><a class="nav-link" routerLink="/analysis/AMZN" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:
+                true}">Analysis</a></li>
+        <!-- <li class="nav-item active"><a class="nav-link" routerLink="/sectors" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:
+                  true}">Sectors</a></li> -->
+        <li class="nav-item active"><a class="nav-link" routerLink="/industries" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:
+                  true}">Industries</a></li>
+        <li class="nav-item active"><a class="nav-link" routerLink="/raw-data" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:
+                  true}">Companies</a></li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+
+        <p class="timeLeft" *ngIf="buttonDisabled">{{displayedTime}}</p>
+
+        <button type="button" class="btn btn-outline-primary" style="margin-right: 2em;" [disabled]="buttonDisabled"
+          (click)="recollectData()">Recollect Data
+        </button>
+
+        <input id="search" name="searchInput" [(ngModel)]="searchInput" (keyup)="onNameKeyUp($event)"
+          class="form-control mr-sm-2" type="text" placeholder="Search Company" aria-label="Search" list="companies">
+        <datalist id="companies">
+          <option *ngFor="let option of options; let i = index" value={{option.symbol}}>{{option.name}}
+        </datalist>
+        <button (click)="clickSearch()" class="btn btn-outline-success my-2 my-sm-0" >Search</button>
+      </form>
+    </div>
+  </nav>
+
+</body>

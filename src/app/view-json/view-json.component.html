@@ -1,0 +1,4 @@
+<app-loading-spinner *ngIf="showSpinner else show"></app-loading-spinner>
+<ng-template #show>
+  <p>{{companyInfo | json}}</p>
+</ng-template>

@@ -1,0 +1,8 @@
+.companyContainer {
+  margin-bottom: 1em;
+}
+
+.companyContainer :first-child {
+  margin-top: 5em;
+}
+/*# sourceMappingURL=search-results.component.css.map */

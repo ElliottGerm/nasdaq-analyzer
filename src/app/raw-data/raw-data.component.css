@@ -1,0 +1,76 @@
+#header {
+  position: relative;
+  text-align: center;
+}
+
+#topContainer {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  right: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+#topContainer i {
+  font-size: 4em;
+  color: #0856d3;
+}
+
+#topContainer span {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 0.42em;
+}
+
+.dataContainer {
+  border: 3px solid #343a40;
+  width: 100%;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: #343a40;
+  color: white;
+  white-space: nowrap;
+  table-layout: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  font-size: 120%;
+}
+
+table {
+  margin-top: 2rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+table tr:hover {
+  border-width: 2px;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+.navbar {
+  padding-top: 5em;
+}
+
+.border-button {
+  border: solid 1px black;
+  -webkit-transition: border-width 0.1s linear;
+  transition: border-width 0.1s linear;
+}
+/*# sourceMappingURL=raw-data.component.css.map */

@@ -1,0 +1,56 @@
+<!-- Card -->
+<!-- Content -->
+<div class="rgba-black-strong py-5 px-4 accordianStyle">
+
+  <div class="titleBox">
+    <h1 id="titleText">Industries</h1>
+    <p id="description">
+      Featured below are the reclassified industries and their respective companies.
+    </p>
+
+
+    <div class="row d-flex justify-content-center" *ngFor="let industry of companiesInIndustries; let i = index"
+      [attr.id]="'accordionEx5' + i">
+      <div class="col-md-10 col-xl-8">
+
+        <!--Accordion wrapper-->
+        <div class="accordion md-accordion accordion-5" id="'accordionEx5' + i" role="tablist"
+          aria-multiselectable="true">
+
+          <!-- Accordion card -->
+          <div class="card mb-4">
+
+            <!-- Card header -->
+            <div class="card-header p-0 z-depth-1" role="tab" id="heading30">
+              <a data-toggle="collapse" [attr.data-parent]="'#accordionEx5' + i" [attr.href]="'#collapse30' + i"
+                aria-expanded="true" aria-controls="collapse30">
+                <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                  {{industryLabels[i]}}
+                </h4>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div [attr.id]="'collapse30' + i" class="collapse hide" role="tabpanel" aria-labelledby="heading30"
+              [attr.data-parent]="'#accordionEx5' + i">
+              <div class="card-body rgba-black-light white-text z-depth-1">
+                <p class="p-md-4 mb-0" (click)="goToProfile(element)" *ngFor="let element of industry; let j = index"
+                  id="companyElements">
+                  {{ element.Name }} ({{ element.Ticker }})
+                  <!-- {{ element.Name }} -->
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+        </div>
+        <!--/.Accordion wrapper-->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+<!-- Card -->

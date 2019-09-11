@@ -1,0 +1,77 @@
+th {
+  background-color: rgb(210, 215, 219);
+  color: black;
+  white-space: nowrap;
+  table-layout: fixed;
+  position: sticky;
+  top: 105px;
+  font-size: 120%;
+}
+
+#topPage {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  right: 3em;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  i {
+    font-size: 4em;
+    color: #28a745;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 1px;
+  }
+}
+
+.hover {
+  display: inline-block;
+  transition-duration: 0.5s;
+  transition-property: transform;
+
+  &:hover {
+    transform: translateY(-6px);
+    animation-name: hover;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+//header and symbol title positioning
+#container_1 {
+  position: sticky;
+  top: 50px;
+  text-align: right;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+//download and view json button positioning
+.btnPosition {
+  padding-left: 10%;
+  position: relative;
+  margin-right: 0%;
+}
+
+.stickyElements {
+  top: 44px;
+  position: sticky;
+  margin-top: 144px;
+  border: 3px solid white;
+  background-color: white;
+}
+
+#emptyData {
+  overflow-y: hidden; // hide vertical
+}
+
+.displayNothing{
+  display: none;
+}

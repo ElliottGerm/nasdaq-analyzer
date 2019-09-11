@@ -1,0 +1,94 @@
+th {
+  background-color: #d2d7db;
+  color: black;
+  white-space: nowrap;
+  table-layout: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 105px;
+  font-size: 120%;
+}
+
+#topPage {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  right: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+#topPage i {
+  font-size: 4em;
+  color: #28a745;
+}
+
+#topPage span {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 1px;
+}
+
+.hover {
+  display: inline-block;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.hover:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-animation-name: hover;
+          animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+#container_1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  text-align: right;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+.btnPosition {
+  padding-left: 10%;
+  position: relative;
+  margin-right: 0%;
+}
+
+.stickyElements {
+  top: 44px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: 144px;
+  border: 3px solid white;
+  background-color: white;
+}
+
+#emptyData {
+  overflow-y: hidden;
+}
+
+.displayNothing {
+  display: none;
+}
+/*# sourceMappingURL=ten-year-data.component.css.map */

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+#text {
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  font-size: 75px;
+  color: rgb(0, 255, 255);
+  /* color: rgb(40, 167, 69); */
+  margin-top: 1em;
+  margin-bottom: 0.7em;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+#description{
+  margin-left: 1em;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.white-text{
+  text-align: center;
+}
+
+#titleText{
+  margin-left: .4em;
+}
+
+.titleBox {
+  text-align: center;
+  color: #eee;
+  padding: 1em;
+  margin: 3em auto;
+  width: 87.8%;
+  
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.accordianStyle {
+  background-color: rgb(48, 48, 48);
+  width: auto;
+  overflow-x: hidden;
+
+}
+
+.card {
+  border: #7d7c82 solid 2px;
+  color: orange;
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+#companyElements {
+  cursor: pointer;
+}
+
+#companyElements:hover {
+  background-color: rgb(255, 69, 0, .5);
+  color: white;
+  font-weight: bolder;
+  /* color: #7d7c82; */
+}

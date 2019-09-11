@@ -1,0 +1,120 @@
+.masterGrid {
+  margin-top: 50px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(48, 48, 48);
+  color: #eee;
+}
+
+.masterGrid > div {
+  background-color: rgba(48, 48, 48);
+  padding: 1em;
+  /* border: red solid 1px; */
+}
+
+#titleBox {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#titleBox > h1 {
+  font-size: 3.5em;
+}
+
+#description {
+  font-size: small;
+  text-justify: newspaper;
+  text-align: center;
+  font-size: 1.7vh;
+  font-size: 1.6vmin;
+}
+
+.stock-data-title {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+/*positions title above stock data*/
+.stock-data-title > p {
+  margin-top: 20px;
+  padding-block-end: 0%;
+}
+
+/*current stock data parent grid*/
+.nestedCurrentStockData {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(110px, auto);
+}
+
+/*Current stock data blue boxes*/
+.nestedCurrentStockData > div {
+  border: rgba(0, 123, 255, 0.8) 2px solid;
+  /* border: #007bff 2px solid; */
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #343a40;
+}
+
+/*Classification and Re-classification parent grid*/
+.nestedClassifications {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(400px, auto);
+}
+
+/*green classification boxes*/
+.nestedClassifications > div {
+  padding-top: 0%;
+  border: #28a745 2px solid;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #343a40;
+}
+
+/*original classification child (1 column grid)*/
+.classificationLeft {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #eee;
+}
+
+.empty {
+  color: #7d7c82;
+}
+
+/*targets header of left classification box*/
+.classificationLeft > div > h1 {
+  font-weight: bold;
+  padding-top: 0.5em;
+}
+
+/*original classification child (1 column grid)*/
+.classificationRight {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #eee;
+}
+
+/*targets header of right classification box*/
+.classificationRight > div > h1 {
+  font-weight: bold;
+  padding-top: 0.5em;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container {
+  max-width: 85%;
+}
+
+.backgroundColor {
+  background-color: rgb(48, 48, 48);
+}

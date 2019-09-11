@@ -1,0 +1,111 @@
+<div class="backgroundColor">
+  <div class="container">
+    <div class="masterGrid">
+
+      <div id="titleBox">
+        <h1>
+          {{name}}
+        </h1>
+      </div>
+
+      <div id="description">
+        {{companyDescription}}
+      </div>
+
+      <div>
+        <p class="stock-data-title">
+          {{mostRecentDate}} 
+          STOCK DATA
+        </p>
+
+        <div class="nestedCurrentStockData">
+          <div>
+            <h2>OPEN</h2>
+            <h3> {{open == "" ? '―' : open | currency}} </h3>
+          </div>
+          <div>
+            <h2>CLOSE</h2>
+            <h3> {{close == "" ? '―' : close | currency}} </h3>
+          </div>
+          <div>
+            <h2>HIGH</h2>
+            <h3> {{high == "" ? '―' : high | currency}} </h3>
+          </div>
+          <div>
+            <h2>LOW</h2>
+            <h3> {{low == "" ? '―' : low | currency}} </h3>
+          </div>
+
+          <div>
+            <h2>VOLUME</h2>
+            <h3> {{volume == "" ? '―' : volume}} </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="nestedClassifications">
+
+        <div class="classificationLeft">
+
+          <div>
+            <h1> Original Classification</h1>
+          </div>
+          <div>
+            <h2>SECTOR</h2>
+            <h5 [class.empty]="isSector">{{sector}}</h5>
+          </div>
+          <div>
+            <h2>INDUSTRY</h2>
+            <h5 [class.empty]="isIndustry">{{industry}}</h5>
+          </div>
+
+          <div class="twoColumns">
+            <div>
+              <h2>IPO YEAR</h2>
+              <h5 *ngIf="notAvailable; else elseBlock" style="color: #7d7c82">Not available</h5>
+              <ng-template #elseBlock>
+                <h5>{{ipoYear}}</h5>
+              </ng-template>
+            </div>
+            <div>
+              <h2>MARKET CAP</h2>
+              <h5>{{marketCap | currency}}</h5>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="classificationRight">
+          <div>
+            <h1>Reclassificaton</h1>
+          </div>
+          <div>
+            <h2>SECTOR</h2>
+            <h5 [class.empty]="isDataFrameSec">{{dataFrameSec}}</h5>
+          </div>
+          <div>
+            <h2>INDUSTRY</h2>
+            <h5 [class.empty]="isDataFrameInd">{{dataFrameInd}}</h5>
+          </div>
+
+          <div class="twoColumns">
+            <div>
+              <h6>SECTOR MARKET CAP TOTAL</h6>
+              <h6>{{secMarkTotal | currency}}</h6>
+            </div>
+            <div>
+              <h6>INDUSTRY MARKET CAP TOTAL</h6>
+              <h6>{{indMarkTotal | currency}}</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+        <app-company-data-line-chart></app-company-data-line-chart>
+      </div>
+
+    </div>
+  </div>
+</div>

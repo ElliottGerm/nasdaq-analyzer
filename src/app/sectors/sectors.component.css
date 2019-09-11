@@ -1,0 +1,62 @@
+main {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15.5rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1em;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  color: #7d7c82;
+}
+
+h5 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  border: #28a745 2px solid;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  cursor: pointer;
+}
+
+body {
+  background-color: #303030;
+}
+
+.title {
+  padding-top: 3em;
+  font-family: fantasy;
+  color: #7d7c82;
+}
+
+.alignment {
+  padding-top: 3em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #303030;
+}
+
+.info {
+  padding-top: 1em;
+}
+/*# sourceMappingURL=sectors.component.css.map */

@@ -1,0 +1,18 @@
+<div *ngIf="!validSearch; then thenBlock; else show"></div>
+<ng-template #thenBlock>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>NO RESULTS FOUND</p>
+</ng-template>
+
+<ng-template #show>
+  <div class="companyContainer" *ngFor="let i of searchResults">
+    <h3>Symbol: {{ i.symbol }}</h3>
+    <h3>Name: {{ i.name }}</h3>
+    <button type="button" class="btn btn-info" (click)="goToAnalysisView(i.symbol)" style="margin-right: 15px">Company Analysis</button>
+    <button type="button" class="btn btn-info" (click)="go210Year(i)">Historical Data</button>
+  </div>
+</ng-template>

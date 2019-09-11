@@ -1,0 +1,33 @@
+.bar-chart {
+  width: 90%;
+  height: 100%;
+  min-width: 1700px;
+  min-height: 600px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.scrollBox {
+  max-width: 79rem;
+  height: 100%;
+  border: 1px solid rgb(103, 106, 119);
+  padding: 1em;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border-radius: 10px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid rgb(103, 106, 119);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(103, 106, 119);
+  border-radius: 10px;
+}

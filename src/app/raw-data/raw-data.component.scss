@@ -1,0 +1,69 @@
+#header {
+  position: relative;
+  text-align: center;
+}
+
+#topContainer {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  right: 3em;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  i {
+    font-size: 4em;
+    color: #0856d3;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 0.42em;
+  }
+}
+
+.dataContainer {
+  border: 3px solid #343a40; //color of nave bar
+  width: 100%;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: #343a40;
+  color: white;
+  white-space: nowrap;
+  table-layout: fixed;
+  position: sticky;
+  top: 50px; //required for sticky header to work
+  font-size: 120%;
+}
+
+table {
+  margin-top: 2rem;
+  tr:nth-child(even) {
+    background-color: #ddd; //alternating backround color for table rows
+  }
+  tr:hover {
+    border-width: 2px;
+  } //hover over boarder effect
+}
+//gives pointer instead of cursor, skips table header
+tbody {
+  tr {
+    cursor: pointer;
+  }
+}
+
+//positions the raw-data search bar
+.navbar {
+  padding-top: 5em;
+}
+
+.border-button {
+  border: solid 1px black;
+  transition: border-width 0.1s linear;
+}

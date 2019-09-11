@@ -1,0 +1,93 @@
+.line-chart {
+  width: 90%;
+  min-width: 750px;
+  padding: 1em;
+  height: auto;
+  max-height: 90%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-gap: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  grid-auto-rows: minmax(500px, 500px);
+}
+
+.grid > div{
+  /* border: rgb(0, 89, 255) solid 1px; */
+  margin: 0%;
+}
+
+
+.dateFormContainer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inlineForm {
+  display: inline-block;
+}
+
+form {
+  color: #7d7c82;
+}
+
+.marketHistory {
+  width: 100%;
+  padding: .5em;
+  background-color: #343a40;
+  border-radius: 10px;
+  border: rgb(40, 167, 69) 3px solid;
+  overflow-y: scroll;
+  max-height: 550px;
+  overflow-x: hidden;
+  margin-bottom: 4em;
+  justify-content: center;
+}
+
+.child {
+  margin-left: 1em;
+  font-size: 0.8em;
+}
+
+.table {
+  color: #eee;
+  font-size: 0.7em;
+}
+
+thead{
+  color: #7d7c82;
+  font-size: 1.2em;
+}
+
+.title {
+  color: #eee;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 0.75em;
+  margin-top: 1.5em;
+  color: #7d7c82;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid rgb(103, 106, 119);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(103, 106, 119);
+  border-radius: 10px;
+}

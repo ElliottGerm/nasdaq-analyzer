@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import "~fortawesome/fontawesome-free/css/all.css"; */
+
+/* Navigation link styles */
+
+/* Global colors:
+#28a745 green
+#343A40 nav blue
+#007BFF recollect data blue */
+
+a.active {
+  border-bottom: 2px solid #28a745;
+}
+
+html,
+body,
+app-root {
+  height: 100%;
+  margin: 0;
+  /*this fixes white background issue when the view 
+    is made smaller and side scroll appears*/
+  /* background-color: rgb(48, 48, 48); */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

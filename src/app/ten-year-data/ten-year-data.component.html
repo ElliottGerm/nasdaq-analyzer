@@ -1,0 +1,50 @@
+<app-loading-spinner *ngIf="showSpinner else show"></app-loading-spinner>
+<ng-template #show>
+    <div class="container">
+        <div id="topPage" (click)=go2Top() class="hover">
+            <i class="fas fa-angle-double-up fa-lg"></i>
+            <span id="jolly">top</span>
+        </div>
+        <div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+            [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle"
+            (scrolled)="onScrollDown()">
+            <div class="stickyElements">
+                <h1 *ngIf="infoExists" id="container_1"> Company: {{ symbol }}
+                    <span class="btnPosition">
+                        <button type="button" class="btn btn-outline-dark" (click)="viewProfile(symbol)"style="margin-right: 5px ">Analysis</button>
+                        <button type="button" class="btn btn-outline-secondary" (click)="viewJson(symbol)" style="margin-right: 5px ">View
+                            JSON</button>
+                        <a [href]="downloadJsonHref" download="company.json">
+                            <button type="button" class="btn btn-outline-success">Download</button>
+                        </a>
+                    </span>
+                </h1>
+            </div>
+            <table class="table" *ngIf="infoExists">
+                <thead>
+                    <tr>
+                        <th> Date </th>
+                        <th> Open </th>
+                        <th> High </th>
+                        <th> Low </th>
+                        <th> Close </th>
+                        <th> Volume </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of scrollCompany">
+                        <td> {{ i.Date }} </td>
+                        <td> {{ i.Open }} </td>
+                        <td> {{ i.High }} </td>
+                        <td> {{ i.Low }} </td>
+                        <td> {{ i.Close }} </td>
+                        <td> {{ i.Volume }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="emptyData" *ngIf="infoExists === false" class="mystery">
+            <h2 #noRecord>No available data for {{ symbol }}</h2>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,14 @@
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: inline-block;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+/*# sourceMappingURL=view-json.component.css.map */

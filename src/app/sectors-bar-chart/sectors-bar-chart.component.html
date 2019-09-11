@@ -1,0 +1,28 @@
+<div class="darkBox">
+
+  <div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-outline-primary active" (click)="toggleChart(1)">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Pie
+      </label>
+      <label class="btn btn-outline-primary" (click)="toggleChart(2)">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Bar
+      </label>
+    </div>
+  </div>
+<!-- 
+  <div class="chartInfo">
+    SECTOR: {{ selectedSector }}
+    <app-chart-enhancements [selectedSector]="selectedSector"></app-chart-enhancements>
+  </div> -->
+
+
+  <div class="Charts" [class.displayNothing]="!toggleBar" (click)="barClick()">
+    <canvas id="canvas1"></canvas>
+  </div>
+  <!-- (mouseenter)="mouseEnter('div a') " (mouseleave)="mouseLeave('div A')" -->
+  <div class="Charts" [class.displayNothing]="!togglePie" (click)="pieClick()">
+    <canvas id="canvas2"></canvas>
+  </div>
+
+</div>

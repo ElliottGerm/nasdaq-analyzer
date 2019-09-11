@@ -1,0 +1,62 @@
+<div id="searchDataTable" tabindex="0">
+  <span class="icon"><i class="fa fa-search"></i></span>
+  <input type="search" (keyup)="applyFilter()" autocomplete="off" placeholder="Search" [(ngModel)]="searchKey">
+</div>
+
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="listData" (matSortChange)="sortCompanies($event)" matSort>
+
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef mat-sort-header="symbol" class="table-header symbol">Symbol</mat-header-cell>
+      <mat-cell class="table-cell symbol" *matCellDef="let element">{{element.symbol}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef class="table-header name">Name</mat-header-cell>
+      <mat-cell class="table-cell name" *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ipo_year">
+      <mat-header-cell class="table-header IPOYear" *matHeaderCellDef mat-sort-header="ipo_year">IPO Year
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="table-cell IPOYear">
+        {{element.ipo_year == -1 ? 'n/a' : element.ipo_year}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="industry">
+      <mat-header-cell class="table-header industry" *matHeaderCellDef mat-sort-header="industry">Industry
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="table-cell industry">
+        {{element.industry == null ? 'n/a' : element.industry}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="market_cap">
+      <mat-header-cell class="table-header marketCap" *matHeaderCellDef mat-sort-header="market_cap">Market Cap
+      </mat-header-cell>
+      <mat-cell id="currency-default" class="table-cell marketCap" *matCellDef="let element">
+        {{element.market_cap | currency }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="sector">
+      <mat-header-cell class="table-header sector" *matHeaderCellDef mat-sort-header="sector">Sector</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="table-cell sector">
+        {{element.sector == null ? 'n/a' : element.sector}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading Data ...
+      </mat-footer-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row id="tableRows" (click)="go210Year(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide': listData != null}"></mat-footer-row>
+    
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[50, 100, 200]" [pageSize]="50" showFirstLastButtons></mat-paginator>
+</div>
